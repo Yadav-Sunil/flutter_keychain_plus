@@ -1,5 +1,5 @@
 name: flutter_keychain_plus
-description: "A new Flutter project."
+description: "Flutter secure storage via Keychain and Keystore"
 version: 0.0.1
 homepage: https://github.com/Yadav-Sunil/flutter_keychain_plus
 
