@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/sunil/development/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/sunil/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/sunil/Desktop/Sunil_worksplace/FlutterProjects/Plugins/flutter_keychain_plus/example/android/app/.cxx/Debug/1p546w2m/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/sunil/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/sunil/Desktop/Sunil_worksplace/FlutterProjects/Plugins/flutter_keychain_plus/example/android/app/.cxx/Debug/1p546w2m/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
