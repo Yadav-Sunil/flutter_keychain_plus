@@ -1,7 +1,7 @@
 name: flutter_keychain_plus
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Yadav-Sunil/flutter_keychain_plus
 
 environment:
   sdk: ^3.6.1
