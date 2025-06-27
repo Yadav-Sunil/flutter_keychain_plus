@@ -1,6 +1,6 @@
 name: flutter_keychain_plus
 description: "Flutter secure storage via Keychain and Keystore"
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/Yadav-Sunil/flutter_keychain_plus
 
 environment:
