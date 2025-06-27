@@ -219,12 +219,12 @@ class AesStringEncryptor// get the key, which is encrypted by RSA cipher.
         secureRandom.nextBytes(key)
         val secretKey = SecretKeySpec(key, KEY_ALGORITHM)
         preferences
-            .edit {
-                putString(
-                    WRAPPED_AES_KEY_ITEM,
-                    Base64.encodeToString(keyWrapper.wrap(secretKey), Base64.DEFAULT)
-                )
-            }
+            .edit()
+            .putString(
+                WRAPPED_AES_KEY_ITEM,
+                Base64.encodeToString(keyWrapper.wrap(secretKey), Base64.DEFAULT)
+            )
+            .apply()
         return secretKey
     }
 
@@ -337,19 +337,19 @@ class FlutterKeychainPlusPlugin : FlutterPlugin, MethodCallHandler {
 
                 "put" -> {
                     val value = encryptor.encrypt(call.value())
-                    preferences.edit { putString(call.key(), value) }
+                    preferences.edit().putString(call.key(), value).apply()
                     result.success(null)
                 }
 
                 "remove" -> {
-                    preferences.edit { remove(call.key()) }
+                    preferences.edit().remove(call.key()).apply()
                     result.success(null)
                 }
 
                 "clear" -> {
                     val savedValue: String? = preferences.getString(WRAPPED_AES_KEY_ITEM, null)
-                    preferences.edit { clear() }
-                    preferences.edit(commit = true) { putString(WRAPPED_AES_KEY_ITEM, savedValue) }
+                    preferences.edit().clear().apply()
+                    preferences.edit().putString(WRAPPED_AES_KEY_ITEM, savedValue).apply()
                     result.success(null)
                 }
 
